@@ -1,4 +1,5 @@
 from time import localtime, strftime, time
+from ui.tracker_windows import get_window
 
 def get_date_formatted():
     what_time_is_it = localtime()
@@ -14,16 +15,9 @@ def stop_timer():
 def main():
     start = start_timer()
 
-    attempts = 3
-
     # This is a test for the timer
-    while attempts > 0:
-        name = input("Write my name:\n ")
-
-        if name != "Sebastian":
-            attempts = attempts - 1
-        else:
-            break
+    while get_window():
+        print("☑️")
 
     
     stop = stop_timer()
