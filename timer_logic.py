@@ -16,16 +16,14 @@ def main():
     start = start_timer()
 
     # This is a test for the timer
-    while get_window():
-        print("☑️")
-
+    active_window = get_window()
     
     stop = stop_timer()
         
     # Measure time for each iteration
     elapsed_time = stop - start
-    print(f"Time taken for write the correct name {elapsed_time} seconds.")
+    print(f"Time spend in {active_window[1]} is of {round(elapsed_time, 2)} seconds.")
     
     return "Correct name written."
 
-print(main())
+main()
