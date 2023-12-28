@@ -4,3 +4,6 @@ env/
 
 # Python Scripts
 Scripts/
+
+# IDE files
+.idea/
